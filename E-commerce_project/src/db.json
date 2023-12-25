@@ -5,6 +5,30 @@
       "email": "kumarmanoj.bz@gmail.com",
       "password": "India&1947",
       "id": 1
+    },
+    {
+      "name": "Mukesh Kumar",
+      "password": "India&1947",
+      "email": "kumarmanoj.bz@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Manoj Kumar",
+      "password": "sadsdfdsfd",
+      "email": "dsfdsfdsf",
+      "id": 3
+    },
+    {
+      "name": "fdddffg",
+      "password": "fdgdgdfg",
+      "email": "gffdgdgd",
+      "id": 4
+    },
+    {
+      "name": "bruce",
+      "password": "India&1947",
+      "email": "bruce@test.com",
+      "id": 5
     }
   ]
 }
