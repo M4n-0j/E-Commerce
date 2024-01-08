@@ -5,6 +5,6 @@ export interface signUp{
 }
 
 export interface login{
-    name:String,
+    email:String,
     password:String
 }

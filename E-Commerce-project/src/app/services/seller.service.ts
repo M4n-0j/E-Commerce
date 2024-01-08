@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { signUp,login } from '../data-type';
 import { BehaviorSubject } from 'rxjs';
@@ -8,9 +8,10 @@ import { Router } from '@angular/router'
 })
 export class SellerService {
   isSellerLoggedIn = new BehaviorSubject<boolean>(false);
+  isLoginError=new EventEmitter<boolean>(false)
   constructor(private http: HttpClient, private router: Router) { }
   userSignUp(data: signUp) {
-    return this.http.post('http://localhost:3000/seller',
+    this.http.post('http://localhost:3000/seller',
       data,
       { observe: 'response' })
       .subscribe((result) => {
@@ -30,5 +31,21 @@ export class SellerService {
   userLogin(data:login){
      console.warn(data);
      // api call code will be there
+     this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`,
+      { observe: 'response' })
+      .subscribe((result:any) => {
+        // this.isSellerLoggedIn.next(true);
+        console.warn(result);
+        if(result && result.body && result.body.length){
+          console.warn("user logged in");
+          localStorage.setItem('seller', JSON.stringify(result.body))
+          this.router.navigate(['seller-home']);
+        }
+        else{
+          console.log("login failed");
+          this.isLoginError.emit(true);
+        }
+      })
+
   }
 }
