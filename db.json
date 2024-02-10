@@ -1,0 +1,48 @@
+{
+  "seller": [
+    {
+      "name": "Manoj Kumar",
+      "password": "qwerty",
+      "email": "qwerty@test.com",
+      "id": 1
+    }
+  ],
+  "products": [
+    {
+      "name": "Mobile1",
+      "Price": "100",
+      "color": "Black",
+      "category": "Cellphone",
+      "description": "A mobile product.",
+      "image": "http:abc",
+      "id": 1
+    },
+    {
+      "name": "Mobile 2",
+      "Price": "101",
+      "color": "Blue",
+      "category": "Cellphone",
+      "description": "it is a mobile phone",
+      "image": "http:def",
+      "id": 2
+    },
+    {
+      "name": "Mobile 2",
+      "Price": "101",
+      "color": "Blue",
+      "category": "Cellphone",
+      "description": "it is a mobile phone",
+      "image": "http:def",
+      "id": 3
+    },
+    {
+      "name": "",
+      "Price": "",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": "",
+      "id": 4
+    }
+  ]
+}
